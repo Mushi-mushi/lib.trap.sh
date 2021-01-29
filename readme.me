@@ -1,0 +1,32 @@
+Example of usage:
+file content: trap-test.sh
+
+#!/bin/bash
+
+source 'lib.trap.sh'
+
+echo "doing something wrong now .."
+echo "$foo"
+
+exit 0
+
+Running:
+
+bash trap-test.sh
+Output:
+
+doing something wrong now ..
+
+(!) EXIT HANDLER:
+
+FILE:       trap-test.sh
+LINE:       6
+
+ERROR CODE: 1
+ERROR MESSAGE:
+foo:   unassigned variable
+
+BACKTRACE IS:
+1 main trap-test.sh
+
+Exiting!
